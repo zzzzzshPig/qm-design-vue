@@ -1,7 +1,7 @@
-import Vue from 'vue'
+export default {
+    name: 'qm-table',
 
-export default Vue.extend({
     data () {
         return {}
     }
-})
+}

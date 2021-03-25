@@ -1,27 +1,32 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "esnext",
         "module": "esnext",
         "strict": true,
+        "jsx": "preserve",
         "importHelpers": true,
         "moduleResolution": "node",
+        "experimentalDecorators": true,
         "skipLibCheck": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "sourceMap": true,
         "baseUrl": ".",
+        "paths": {
+            "qm-design": ["components/index.ts"]
+        },
         "lib": [
             "esnext",
+            "dom.iterable",
+            "scripthost",
             "dom"
+        ],
+        "types": [
+            "webpack-env",
+            "./types/shims-vue"
         ]
     },
-    "include": [
-        "components/**/*.js",
-        "components/**/*.ts",
-        "components/**/*.vue",
-        "tests/**/*.ts"
-    ],
     "exclude": [
         "node_modules",
         "dist"

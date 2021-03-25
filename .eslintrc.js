@@ -1,22 +1,22 @@
 module.exports = {
+    root: true,
     env: {
-        es2021: true,
-        node: true,
-        browser: true
+        node: true
     },
+    ignorePatterns: ['*.d.ts', '*.html'],
     extends: [
-        'standard'
+        '@vue/standard',
+        'plugin:vue/essential',
+        'typescript'
     ],
-    parser: '@typescript-eslint/parser',
     parserOptions: {
-        ecmaVersion: 12,
-        sourceType: 'module'
+        parser: '@typescript-eslint/parser',
+        ecmaVersion: 12
     },
-    plugins: [
-        '@typescript-eslint'
-    ],
     rules: {
         indent: ['error', 4],
-        'no-unused-vars': 'off'
+        'vue/html-indent': ['error', 4],
+        'no-unused-vars': 'off',
+        'no-new': 'off'
     }
 }
