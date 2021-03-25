@@ -1,5 +1,5 @@
 {
-    "name": "qm-component-vue-server",
+    "name": "qm-design-vue",
     "version": "1.0.0",
     "main": "./dist/index.esm.js",
     "types": "./dist/main.d.ts",
@@ -9,7 +9,7 @@
         "email": "zzzzzzshpig@163.com"
     },
     "keywords": [
-        "qm-component-vue-server"
+        "qm-design-vue"
     ],
     "module": "dist/index.js",
     "author": "zhoushaohui",

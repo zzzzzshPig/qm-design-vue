@@ -14,7 +14,7 @@
         "sourceMap": true,
         "baseUrl": ".",
         "paths": {
-            "qm-design": ["components/index.ts"]
+            "qm-design-vue": ["components/index.ts"]
         },
         "lib": [
             "esnext",

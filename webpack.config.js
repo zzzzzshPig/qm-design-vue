@@ -51,7 +51,7 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            'qm-design': path.join(__dirname, './components')
+            'qm-design-vue': path.join(__dirname, './components')
         },
         extensions: ['.ts', '.js', '.vue']
     },
