@@ -1,5 +1,5 @@
 <template>
-    <div class="index-page">
+    <div id="app">
         <qm-table></qm-table>
     </div>
 </template>
