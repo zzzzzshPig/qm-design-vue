@@ -36,8 +36,6 @@ const babelConfig = {
 }
 
 module.exports = {
-    mode: 'development',
-    entry: './examples/index.ts',
     output: {
         filename: 'index.js',
         path: path.join(__dirname, '/dist'),
@@ -88,7 +86,7 @@ module.exports = {
                 test: /\.less$/i,
                 use: [
                     {
-                        loader: 'style-loader'
+                        loader: 'vue-style-loader'
                     },
                     {
                         loader: 'css-loader'
@@ -130,20 +128,7 @@ module.exports = {
         new VueLoaderPlugin()
     ],
     resolve: {
-        alias: {
-            'qm-design-vue': path.join(__dirname, './components')
-        },
         extensions: ['.ts', '.js', '.vue']
     },
-    externals: ['vue', 'ant-design-vue'],
-    devtool: 'cheap-source-map',
-    devServer: {
-        historyApiFallback: {
-            rewrites: [{ from: /./, to: '/index.html' }]
-        },
-        disableHostCheck: true,
-        hot: true,
-        open: true,
-        port: 8080
-    }
+    devtool: 'cheap-source-map'
 }
