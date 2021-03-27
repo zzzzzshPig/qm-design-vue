@@ -1,8 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
-const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
 const babelConfig = {
     cacheDirectory: true,
     plugins: [
@@ -94,25 +94,6 @@ module.exports = {
                         }
                     }
                 ]
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    'vue-style-loader',
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: true
-                        }
-                    },
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            ...postcssConfig
-                        }
-                    }
-                ]
             }
         ]
     },
@@ -120,7 +101,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css'
         }),
-        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: 'examples/index.html',
             filename: 'index.html',
