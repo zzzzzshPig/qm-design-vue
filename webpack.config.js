@@ -135,6 +135,7 @@ module.exports = {
         },
         extensions: ['.ts', '.js', '.vue']
     },
+    externals: ['vue', 'ant-design-vue'],
     devtool: 'cheap-source-map',
     devServer: {
         historyApiFallback: {
