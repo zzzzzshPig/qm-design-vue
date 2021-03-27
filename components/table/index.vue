@@ -17,7 +17,7 @@
 
 <style lang="less" scoped>
     .qm-table {
-        margin-top: 100px;
+        display: flex;
     }
 </style>
 

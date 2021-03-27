@@ -3,26 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
 const babelConfig = {
     cacheDirectory: true,
-    presets: [
-        [
-            '@babel/preset-env',
-            {
-                targets: {
-                    browsers: [
-                        'last 2 versions',
-                        'Firefox ESR',
-                        '> 1%',
-                        'ie >= 11',
-                        'iOS >= 8',
-                        'Android >= 4'
-                    ]
-                }
-            }
-        ]
-    ],
     plugins: [
         [
             'babel-plugin-import',
@@ -33,6 +15,12 @@ const babelConfig = {
             }
         ]
     ]
+}
+
+const postcssConfig = {
+    postcssOptions: {
+        plugins: [require('autoprefixer')()]
+    }
 }
 
 module.exports = {
@@ -92,6 +80,12 @@ module.exports = {
                         loader: 'css-loader'
                     },
                     {
+                        loader: 'postcss-loader',
+                        options: {
+                            ...postcssConfig
+                        }
+                    },
+                    {
                         loader: 'less-loader',
                         options: {
                             lessOptions: {
@@ -104,13 +98,20 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
+                    'vue-style-loader',
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
                             hmr: true
                         }
                     },
-                    'css-loader'
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            ...postcssConfig
+                        }
+                    }
                 ]
             }
         ]
