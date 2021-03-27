@@ -3,6 +3,7 @@ const path = require('path')
 
 module.exports = {
     ...baseConfig,
+    target: 'web',
     mode: 'development',
     entry: './examples/index.ts',
     resolve: {
