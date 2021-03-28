@@ -8,7 +8,9 @@ module.exports = {
     entry: './examples/index.ts',
     resolve: {
         alias: {
-            'qm-design-vue': path.join(__dirname, '../components')
+            'qm-design-vue': path.join(__dirname, '../components'),
+            'qm-design-vue-es': path.join(__dirname, '../es'),
+            'qm-design-vue-lib': path.join(__dirname, '../lib')
         },
         extensions: ['.ts', '.js', '.vue']
     },

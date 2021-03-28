@@ -1,10 +1,12 @@
-src/
 .idea
 .vscode
 .gitignore
 .npmignore
 .eslintrc.js
 .eslintignore
-webpack.config.js
 tsconfig.json
 yarn.lock
+config/
+components/
+examples/
+types/

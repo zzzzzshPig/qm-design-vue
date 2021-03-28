@@ -15,10 +15,6 @@
     </div>
 </template>
 
-<style lang="less" scoped>
-    .qm-table {
-        display: flex;
-    }
-</style>
+<style lang="less" scoped src="./style/index.less"></style>
 
 <script lang="ts" src="./index.ts"></script>

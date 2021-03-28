@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { table } from 'qm-design-vue'
+import { table } from 'qm-design-vue-lib'
 
 Vue.use(table)
 
