@@ -5,6 +5,7 @@
 .eslintrc.js
 .eslintignore
 tsconfig.json
+.editorconfig
 yarn.lock
 config/
 components/
