@@ -1,5 +1,4 @@
 const baseConfig = require('./webpack.base')
-const path = require('path')
 
 module.exports = {
     ...baseConfig,
